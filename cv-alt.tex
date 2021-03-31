@@ -1,6 +1,6 @@
 \documentclass[a4paper,10pt]{article}
 
-%Packages
+% Packages
 \RequirePackage[usenames, dvipsnames]{color}
 \RequirePackage{xcolor}
 \RequirePackage{fontawesome}
@@ -10,12 +10,18 @@
 \usepackage{titlesec}
 \usepackage{hyperref}
 
-%Setup hyperref package, and colours for links
+% Prevent hyphenation throughout the document
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% Setup hyperref package, and colours for links
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \definecolor{awesome-red}{HTML}{DC3522}
 \hypersetup{colorlinks, breaklinks, urlcolor=linkcolour, linkcolor=linkcolour}
 
-%Fonts
+% Fonts
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[
 	Path = fonts/, SmallCapsFont = Roboto-Regular.ttf,
@@ -23,7 +29,7 @@
   	Path = fonts/, BoldFont = Roboto-Bold.ttf]
 {Roboto-Light.ttf}
 
-%CV Sections
+% CV Sections
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
 \titleformat{\subsection}{}{}{0em}{}[\titlerule]
@@ -68,6 +74,7 @@
         \textsc{March 2020 – March 2021} & \textbf{Backend Engineer} @ \textbf{Keyrock} \\ 
         & \footnotesize{At Keyrock we developed a globally distributed playform for market-making for cryptocurrencies. Our team developed a scalable engine for algorithmic trading built on Rust, deploying newly developed alhgorithms developed by our researchers. On top of that, we built large pipelines for the influx of large amounts of trade date to provide visibility into the daily trading activity to the other teams and our customers. This system was deployed on a daily basis around the globe on AWS in close cooperation with our various partners.} \\
         \multicolumn{2}{c}{} \\
+        
 
         \textsc{May 2018 – March 2020} & \textbf{Cloud Backend Engineer} @ \textbf{Reniver} \\ 
 	& \footnotesize{At Reniver we developed a full-stack solution for an Industrial Internet of Things environment. This meant writing our own firmware for our self-designed multi-sensor hardware, a backend management platform, a networked configuration protocol, along with additional services to integrate "smart" industrial PLCs using OPC UA, and to publish data to various cloud platforms. Our entire stack used C, Scala and .NET. }\\
@@ -89,7 +96,8 @@
 	& \footnotesize{Other responsibilities included setting up a large portion of the supporting infrastructure. This included defining infrastructure-as-code using Terraform, deploying and managing several Kubernetes clusters, setting-up and maintaining a CI/CD pipeline using Jenkins/Concourse and supporting tools such as monitoring using Prometheus, ELK, CoScale and Gatling.}\\
 	& \footnotesize{The project was developed in an Agile environment using extensive knowledge-sharing, Extreme Programming practices and frequent code-reviews}\\
 	\multicolumn{2}{c}{} \\
-	
+
+        
 	\textsc{Apr 2011 – Oct 2016} & \textbf{IT Medewerker} @ \textbf{Ypto N.V.} \\
 	& \footnotesize{Responsible for a wide variety of tasks and projects including managing Windows and Linux systems, custom ETL jobs, setting up log-aggregation systems, development of small tools for in-house use, application monitoring, etc.} \\
 	\multicolumn{2}{c}{} \\
