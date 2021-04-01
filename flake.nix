@@ -9,13 +9,16 @@
       cv = pkgs.stdenv.mkDerivation rec {
         pname = "romatthe-cv";
         version = "1.0.0";
-        src = "./";
-        buildInputs = [ pkgs.tectonic ];
+        src = ./.;
+        buildInputs = [
+          pkgs.tectonic
+        ];
+        dontUnpack = true;
         buildPhase = ''
-          tectonic cv-alt.tex
-        '';        
+          tectonic -X compile cv-alt.tex
+        '';
         installPhase = ''
-          cp -r cv-alt.pdf $out
+          cp -r * $out/
         '';
       };
     in  
